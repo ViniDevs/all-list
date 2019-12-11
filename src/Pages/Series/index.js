@@ -18,15 +18,32 @@ async componentDidMount() {
       this.setState({series: response.data})
 }*/
 
+state = {
+
+   data:[],
+};
+
+async componentDidMount(){
+
+    const series = await api.get(`/sample.json`);
+    this.setState({data: series.data.entries})
+    console.log(this.state.data)
+
+}
 
     render() {
+         const {data} = this.state
         return(
 
             <Fragment>
             <Navbar />
             <Title />
             <Article>
+            {data && data.map(serie => (<li key={serie.title}>
+                    {serie.title}
 
+                </li>))}
+                {/* {data && data.filter(serie => serie.programTypes('series'))} */}
             </Article>
             <Footer />
     </Fragment>
