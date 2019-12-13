@@ -1,23 +1,17 @@
-import React, {Component, Fragment} from 'react';
-import Inicial from './Pages/Inicial/index';
-import Series from './Pages/Series/index';
-import InjectGlobal from './styles/global';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import React, {Component} from 'react';
+import Routes from './routes';
+
+import GlobalStyle from './styles/global';
+
 
 export default class App extends Component{
 
    render() {
      return(
-     <BrowserRouter>
-
-      <Fragment>
-      <InjectGlobal />
-      <Switch>
-      <Route path="/" exact={true} component={Inicial}/>
-      <Route path="/Series" component={Series} />
-      </Switch>
-    </Fragment>
-    </BrowserRouter>
+         <>
+         <Routes />
+         <GlobalStyle />
+         </>
      );
    }
 }

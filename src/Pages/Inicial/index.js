@@ -4,7 +4,8 @@ import Title from '../../components/titbar';
 import Footer from '../../components/footer';
 import {Article} from './styles';
 
-import { Link } from 'react-router-dom';
+
+import SocialLink from './styles';
 
 const Inicial = () =>(
     <>
@@ -12,7 +13,7 @@ const Inicial = () =>(
     <Title />
     <Article>
         <section>
-            <Link to="/Series"><div>Séries</div></Link>
+            <SocialLink to="/Series"><div>Séries</div></SocialLink>
             <p>Séries Populares</p>
         </section>
 

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 
-const InjectGlobal = createGlobalStyle`
+export default createGlobalStyle`
 *{
     margin: 0;
     padding:0;
@@ -16,4 +16,4 @@ body {
   }
 `;
 
-export default InjectGlobal;
+
