@@ -1,16 +1,16 @@
 import React from 'react';
 import {Nav} from './styles';
+import SocialLink from './styles'
+
 
 const Navbar = () =>(
   <Nav>
-      <h1>Lista Tudo</h1>
-
+      <SocialLink to ='/'>All List</SocialLink>
       <ul>
           <li className='login'>Login</li>
-          <li className='btn'>Cadastre-se</li>
-     </ul> 
+          <li className='btn'>Register</li>
+     </ul>
 </Nav>
-    
 
 );
 

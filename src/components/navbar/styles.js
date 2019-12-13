@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 export const Nav = styled.div`
 
@@ -38,6 +40,7 @@ ul .login{
     align-items: center;
 
     font-weight: bolder;
+    cursor:pointer;
 }
 
 
@@ -49,14 +52,24 @@ ul .btn{
     display:flex;
     justify-content: center;
     align-items: center;
-    
+
     font-weight: bold;
 
     border-radius: 10px 10px;
+    cursor:pointer;
 
 }
 
-
 `;
 
+const SocialLink = styled(Link)`
+   text-decoration: none;
+
+    color: #FFF;
+    font-size: 50px;
+    margin-left:10px;
+    font-weight: bold;
+`;
+
+export default SocialLink;
 

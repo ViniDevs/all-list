@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import api from '../../services/api';
-import {SerieLists, Header} from './styles';
+import {SerieLists} from './styles';
 
 export default class SerieList extends Component{
 
@@ -16,7 +16,7 @@ export default class SerieList extends Component{
          const data = series.data.entries
 
          this.setState({
-             data: data.slice(0, 22).filter(program =>
+             data: data.slice(0, 28).filter(program =>
              program.programType ==='series' && program.releaseYear > 2010 )});
 
          console.log(this.state.data);
@@ -27,11 +27,15 @@ export default class SerieList extends Component{
 
       return(
          <SerieLists>
-              {data.map(serie => (<Header key={serie.title}>
+
+              {data.map(serie => (
+
+              <div className="post" key={serie.title}>
                     <img src={serie.images['Poster Art'].url} alt={serie.title} />
-                    <h6>{serie.title}</h6>
+                    <h5>{serie.title}</h5>
                     <p>{serie.description}</p>
-                </Header>))}
+              </div>))}
+
          </SerieLists>
       );
   }

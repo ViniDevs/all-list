@@ -13,13 +13,13 @@ const Inicial = () =>(
     <Title />
     <Article>
         <section>
-            <SocialLink to="/Series"><div>Séries</div></SocialLink>
-            <p>Séries Populares</p>
+            <SocialLink to="/series">Series</SocialLink>
+            <p>Popular Series</p>
         </section>
 
         <section>
-            <div>Filmes</div>
-            <p>Filmes Populares</p>
+            <SocialLink to="/movies"><div>Movies</div></SocialLink>
+            <p>Popular Movies</p>
         </section>
 
     </Article>

@@ -3,9 +3,9 @@ import {Section} from './styles';
 
 const Title = () =>(
   <Section>
-      <h2>Títulos Populares</h2>
+      <h2>Popular Titles</h2>
 </Section>
-    
+
 
 );
 
